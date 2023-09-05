@@ -28,13 +28,18 @@
                     ?>
                         <div class="card">
                             <div class="card-header">
-                                <?= $question['title']; ?>
+                                <a href="article.php?id=<?= $question['id']; ?>">
+                                    <?= $question['title']; ?>
+                                </a>
                             </div>
                             <div class="card-body">
                                 <?= $question['description']; ?>
                             </div>
                             <div class="card-footer">
-                                Publié par <?= $question['pseudo_author']; ?> le <?= $question['publication_date']; ?>.
+                                Publié par 
+                                <a href="profile.php?id=<?= $question['id_author'] ?>">
+                                    <?= $question['pseudo_author']; ?> le <?= $question['publication_date']; ?>.
+                                </a>
                             </div>
                         </div>
                         <br>

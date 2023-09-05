@@ -22,10 +22,10 @@
         if($checkIfQuestionExists->rowCount() > 0) {
 
             // Récupère les infos de la question
-            $userInfos = $checkIfQuestionExists->fetch();
+            $questionInfos = $checkIfQuestionExists->fetch();
 
             // Contrôle que l'id de l'auteur est bien celui de la session
-            if($userInfos['id_author'] == $_SESSION['id']) {
+            if($questionInfos['id_author'] == $_SESSION['id']) {
 
                 // Supprime la question
                 $deleteQuestion = $database->prepare('DELETE FROM questions WHERE id = ?');
