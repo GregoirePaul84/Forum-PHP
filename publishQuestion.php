@@ -1,7 +1,6 @@
-<?php 
-    require('actions/users/securityAction.php'); 
+<?php  
     require('actions/questions/publishQuestionAction.php');
-    
+    require('actions/users/securityAction.php');
 ?>
 
 <!DOCTYPE html>
